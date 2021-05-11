@@ -1,0 +1,28 @@
+{
+  "name": "dice-game",
+  "version": "1.0.0",
+  "description": "Evaluation | Dynamiser vos sites web avec Javascript",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/styles.css -o build/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sverine/dice-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sverine/dice-game/issues"
+  },
+  "homepage": "https://github.com/Sverine/dice-game#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1"
+  }
+}
