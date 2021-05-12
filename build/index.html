@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="description" content="Montpellier Beach Master est une association à but non lucratif ayant pour but de féderer des bénévoles afin de nettoyer les plages aux alentours de Montpellier"> -->
+        <!-- <title>Montpellier Beacher Master | Proteger la Méditerranée</title> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex">
+        <!-- <meta property="og:title" content="Montpellier Beacher Master : Proteger la Méditerranée" />
+        <meta property="og:description" content=" Montpellier Beach Master : Association à but non lucratif ayant pour but de féderer des bénévoles afin de nettoyer les plages aux alentours de Montpellier" />
+        <meta property="og:image" content="https://sverine.github.io/montpellier-beach-cleaners/images/og-img.jpg" />
+        <meta property="og:url" content="https://sverine.github.io/montpellier-beach-cleaners/" />
+        <link rel="icon" type="image/png" href="images/flavicon.png" / > -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+    </head>
+
+    <body >
+        <div class="bg-gradient-to-r from-yellow-700 to-yellow-900 h-screen flex">
+            <div class="2xl:container h-5/6 bg-white mx-auto self-center shadow-xl relative">
+                
+                <div class="w-full h-full absolute flex z-0">
+                    <div class="w-2/4 h-full bg-gray-50"></div>
+                    <div class="w-2/4 h-full"></div>
+                </div>
+                <div class="relative flex items-center w-full justify-items-center justify-center my-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 red-500 stroke-current text-red-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h1 class="uppercase ml-4 text-2xl">new game</h1>
+                </div>
+                
+                <!-- PLAYERS CONTAINERS -->
+                <div class="player-container flex relative h-5/6">
+
+                    <!-- PLAYER 1 CONTAINER -->
+                    <div class="player-content w-2/4  flex items-center flex-col justify-between p-20">
+
+                        <div class="player-title-container flex items-center">
+                            <h2 class="player-title uppercase text-4xl">Player 1 </h2>
+                            <span>
+                                <svg class="h-4 w-4 ml-5 opacity-100 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+                                    <circle cx="50" cy="50" r="50"/>
+                                
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="player-round-score-container -mt-60">
+                            <h3 class="player-round-score text-8xl thin text-red-500">43</h3>
+                        </div>
+                        <div class="player-global-score-container bg-red-500 p-5 flex flex-col items-center">
+                            <p class="player-global-score uppercase text-lg">current</p>
+                            <h3 class="text-white text-4xl">11</h3>
+                        </div>
+                    </div>
+
+                    <!-- PLAYER 2 CONTAINER -->
+                    <div class="player-content w-2/4  flex items-center flex-col justify-between p-20">
+
+                        <div class="player-title-container flex items-center">
+                            <h2 class="player-title uppercase text-4xl">Player 2 </h2>
+                            <span>
+                                <svg class="h-4 w-4 ml-5 opacity-100 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+                                    <circle cx="50" cy="50" r="50"/>
+                                
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="player-round-score-container -mt-60">
+                            <h3 class="player-round-score text-8xl thin text-red-500">72</h3>
+                        </div>
+                        <div class="player-global-score-container bg-red-500 p-5 flex flex-col items-center">
+                            <p class="player-global-score uppercase text-lg">current</p>
+                            <h3 class="text-white text-4xl">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DICE -->
+                <div class="dice-container absolute z-1 top-0 mx-auto w-full h-full flex flex-col items-center justify-center">
+
+                    <div class="dice-item">
+                        <div class="cube">
+                        <div class="cube__face cube__face--one"></div>
+                        <div class="cube__face cube__face--six"></div>
+                        <div class="cube__face cube__face--two"></div>
+                        <div class="cube__face cube__face--five"></div>
+                        <div class="cube__face cube__face--three"></div>
+                        <div class="cube__face cube__face--four"></div>
+                        </div>
+                    </div>
+                    <!-- DICE LABEL -->
+                    <!-- <p class="radio-group">
+                        <label>
+                        <input type="radio" name="rotate-cube-side" value="1" checked /> one
+                        </label>
+                        <label>
+                        <input type="radio" name="rotate-cube-side" value="2" /> two
+                        </label>
+                        <label>
+                        <input type="radio" name="rotate-cube-side" value="3" /> three
+                        </label>
+                        <label>
+                        <input type="radio" name="rotate-cube-side" value="4" /> four
+                        </label>
+                        <label>
+                        <input type="radio" name="rotate-cube-side" value="5" /> five
+                        </label>
+                        <label>
+                        <input type="radio" name="rotate-cube-side" value="6" /> six
+                        </label>
+                    </p> -->
+
+                    <div class="roll-dice-container flex items-center mt-5 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 red-500 stroke-current text-red-500 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                          <p class="uppercase text-xl">Roll dice</p>
+                    </div>
+
+                    <div class="roll-dice-container flex items-center mt-5 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 red-500 stroke-current text-red-500 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                        </svg>
+                          <p class="uppercase text-xl">hold</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="dice.js"></script>
+    </body>
+    </html>
