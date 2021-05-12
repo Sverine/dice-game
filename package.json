@@ -4,7 +4,7 @@
   "description": "Evaluation | Dynamiser vos sites web avec Javascript",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/styles.css -o build/styles.css"
+    "build": "postcss css/style.css -o build/style.css"
   },
   "repository": {
     "type": "git",
