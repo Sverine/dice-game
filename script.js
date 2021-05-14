@@ -138,7 +138,7 @@ function holdScore(){
     playerGlobalScore[currentPlayer].textContent = playerGlobalScoreValue
     
     //End of game at 100 points
-    if (playerGlobalScoreValue < 30){
+    if (playerGlobalScoreValue < 100){
         currentPlayer++
         //Keep the currentPlayer value odd or even
         currentPlayer %2 == 0 ? currentPlayer = 0 : currentPlayer = 1
