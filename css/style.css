@@ -59,22 +59,22 @@ input:focus[type=text], button:focus{
   }
   
   .cube__face--one  { 
-    background-image: url('../images/one.svg'); transform: rotateY(  0deg) translateZ(100px);
+    background-image: url('images/one.svg'); transform: rotateY(  0deg) translateZ(100px);
   }
   .cube__face--two  { 
-    background-image: url('../images/two.svg');transform: rotateY( 90deg) translateZ(100px); 
+    background-image: url('images/two.svg');transform: rotateY( 90deg) translateZ(100px); 
   }
   .cube__face--six  { 
-    background-image: url('../images/six.svg');transform: rotateY(180deg) translateZ(100px); 
+    background-image: url('images/six.svg');transform: rotateY(180deg) translateZ(100px); 
   }
   .cube__face--five  { 
-    background-image: url('../images/five.svg');transform: rotateY(-90deg) translateZ(100px); 
+    background-image: url('images/five.svg');transform: rotateY(-90deg) translateZ(100px); 
   }
   .cube__face--three  { 
-    background-image: url('../images/three.svg');transform: rotateX( 90deg) translateZ(100px); 
+    background-image: url('images/three.svg');transform: rotateX( 90deg) translateZ(100px); 
   }
   .cube__face--four  { 
-    background-image: url('../images/four.svg');transform: rotateX(-90deg) translateZ(100px); 
+    background-image: url('images/four.svg');transform: rotateX(-90deg) translateZ(100px); 
   }
 
   .cube__face--one, .cube__face--two, .cube__face--six, .cube__face--five, .cube__face--three,.cube__face--four {
