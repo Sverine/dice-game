@@ -2,30 +2,31 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <!-- <meta name="description" content="Montpellier Beach Master est une association à but non lucratif ayant pour but de féderer des bénévoles afin de nettoyer les plages aux alentours de Montpellier"> -->
-        <!-- <title>Montpellier Beacher Master | Proteger la Méditerranée</title> -->
+        <meta name="description" content="Evaluation | Dynamiser vos sites web avec Javascript">
+        <title>Jeu de lancer de dés | Dice Game</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noindex">
-        <!-- <meta property="og:title" content="Montpellier Beacher Master : Proteger la Méditerranée" />
-        <meta property="og:description" content=" Montpellier Beach Master : Association à but non lucratif ayant pour but de féderer des bénévoles afin de nettoyer les plages aux alentours de Montpellier" />
+
+        <meta property="og:title" content="Evaluation | Dynamiser vos sites web avec Javascript" />
+        <meta property="og:description" content=" Jeu de lancer de dés | Dice Game" />
         <meta property="og:image" content="https://sverine.github.io/montpellier-beach-cleaners/images/og-img.jpg" />
-        <meta property="og:url" content="https://sverine.github.io/montpellier-beach-cleaners/" />
-        <link rel="icon" type="image/png" href="images/flavicon.png" / > -->
+        <meta property="og:url" content="https://sverine.github.io/dice-game/" />
+
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         
     </head>
 
-    <body >
-        <div class="bg-gradient-to-r from-yellow-700 to-yellow-900 h-screen flex">
-            <div class="2xl:container h-5/6 bg-white mx-auto self-center shadow-xl relative">
+    <body class="bg-gradient-to-r from-yellow-700 to-yellow-900">
+        <div class="flex p-14">
+            <div class="main-container sm:container h-full sm:h-5/6 bg-white mx-auto self-center shadow-xl relative w-full">
                 
-                <div class="w-full h-full absolute flex z-0">
-                    <div class="w-2/4 h-full bg-gray-50"></div>
-                    <div class="w-2/4 h-full"></div>
+                <div class="w-full h-full absolute z-0 flex flex-col sm:flex-row">
+                    <div class="player-bg w-full h-3/6 sm:w-3/6 sm:h-full"></div>
+                    <div class="player-bg w-full h-3/6 sm:w-3/6 sm:h-full"></div>
                 </div>
-                <div class="relative flex items-center w-full justify-items-center justify-center my-5">
+                <div onclick="showStartNewGameModal()" class="new-game cursor-pointer relative flex items-center w-full justify-items-center justify-center my-5">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 red-500 stroke-current text-red-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -33,105 +34,165 @@
                 </div>
                 
                 <!-- PLAYERS CONTAINERS -->
-                <div class="player-container flex relative h-5/6">
+                <div class="player-container flex justify-between items-center relative h-4/5 flex-col sm:flex-row sm:items-stretch">
 
                     <!-- PLAYER 1 CONTAINER -->
-                    <div class="player-content w-2/4  flex items-center flex-col justify-between p-20">
+                    <div class="player-content w-full  flex items-center flex-col justify-between p-5 sm:p-20 sm:justify-start">
 
                         <div class="player-title-container flex items-center">
-                            <h2 class="player-title uppercase text-4xl">Player 1 </h2>
+                            <h2 class="player-title uppercase text-xl md:text-4xl">Player 1 </h2>
                             <span>
-                                <svg class="h-4 w-4 ml-5 opacity-100 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
+                                <svg class="current-player opacity-0 h-4 w-4 ml-5 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="50"/>
-                                
                                 </svg>
                             </span>
                         </div>
-                        <div class="player-round-score-container -mt-60">
-                            <h3 class="player-round-score text-8xl thin text-red-500">43</h3>
-                        </div>
-                        <div class="player-global-score-container bg-red-500 p-5 flex flex-col items-center">
-                            <p class="player-global-score uppercase text-lg">current</p>
-                            <h3 class="text-white text-4xl">11</h3>
+                        <div class="flex justify-around items-center w-full mt-7 sm:flex-col sm:mt-96">
+                            <div class="player-round-score-container">
+                                <h3 class="player-round-score text-4xl md:text-8xl thin text-red-500 sm:-mt-52 md:-mt-72">0</h3>
+                            </div>
+                            <div class="player-global-score-container bg-red-500 p-3 md:p-5 flex flex-col items-center">
+                                <p class="uppercase text-sm md:text-lg">current</p>
+                                <h3 class="player-global-score text-white text-xl md:text-4xl">0</h3>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PLAYER 2 CONTAINER -->
-                    <div class="player-content w-2/4  flex items-center flex-col justify-between p-20">
+                    <div class="player-content w-full  flex items-center flex-col justify-between p-5 sm:p-20 sm:justify-start">
 
                         <div class="player-title-container flex items-center">
-                            <h2 class="player-title uppercase text-4xl">Player 2 </h2>
+                            <h2 class="player-title uppercase text-xl md:text-4xl">Player 2 </h2>
                             <span>
-                                <svg class="h-4 w-4 ml-5 opacity-100 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
+                                <svg class="current-player opacity-0 h-4 w-4 ml-5 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="50"/>
-                                
                                 </svg>
                             </span>
                         </div>
-                        <div class="player-round-score-container -mt-60">
-                            <h3 class="player-round-score text-8xl thin text-red-500">72</h3>
-                        </div>
-                        <div class="player-global-score-container bg-red-500 p-5 flex flex-col items-center">
-                            <p class="player-global-score uppercase text-lg">current</p>
-                            <h3 class="text-white text-4xl">0</h3>
+                        <div class="flex justify-around items-center w-full mt-7 sm:flex-col sm:mt-96">
+                            <div class="player-round-score-container">
+                                <h3 class="player-round-score text-4xl md:text-8xl thin text-red-500 sm:-mt-52 md:-mt-72">0</h3>
+                            </div>
+                            <div class="player-global-score-container bg-red-500 p-3 md:p-5 flex flex-col items-center">
+                                <p class="uppercase text-sm md:text-lg">current</p>
+                                <h3 class="player-global-score text-white text-xl md:text-4xl">0</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- DICE -->
-                <div class="dice-container absolute z-1 top-0 mx-auto w-full h-full flex flex-col items-center justify-center">
+                <div class="dice-container absolute z-1 top-0 mx-auto w-full mt-64 flex flex-col items-center justify-center">
 
                     <div class="dice-item">
                         <div class="cube">
-                        <div class="cube__face cube__face--one"></div>
-                        <div class="cube__face cube__face--six"></div>
-                        <div class="cube__face cube__face--two"></div>
-                        <div class="cube__face cube__face--five"></div>
-                        <div class="cube__face cube__face--three"></div>
-                        <div class="cube__face cube__face--four"></div>
+                            <div class="cube__face cube__face--one"></div>
+                            <div class="cube__face cube__face--six"></div>
+                            <div class="cube__face cube__face--two"></div>
+                            <div class="cube__face cube__face--five"></div>
+                            <div class="cube__face cube__face--three"></div>
+                            <div class="cube__face cube__face--four"></div>
                         </div>
                     </div>
-                    <!-- DICE LABEL -->
-                    <!-- <p class="radio-group">
-                        <label>
-                        <input type="radio" name="rotate-cube-side" value="1" checked /> one
-                        </label>
-                        <label>
-                        <input type="radio" name="rotate-cube-side" value="2" /> two
-                        </label>
-                        <label>
-                        <input type="radio" name="rotate-cube-side" value="3" /> three
-                        </label>
-                        <label>
-                        <input type="radio" name="rotate-cube-side" value="4" /> four
-                        </label>
-                        <label>
-                        <input type="radio" name="rotate-cube-side" value="5" /> five
-                        </label>
-                        <label>
-                        <input type="radio" name="rotate-cube-side" value="6" /> six
-                        </label>
-                    </p> -->
 
-                    <div class="roll-dice-container flex items-center mt-5 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 red-500 stroke-current text-red-500 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="roll-dice-container flex items-center cursor-pointer -mt-4 sm:mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8 red-500 stroke-current text-red-500 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                         </svg>
-                          <p class="uppercase text-xl">Roll dice</p>
+                          <p onclick="rollDice()"class="uppercase text-md sm:text-xl">Roll dice</p>
                     </div>
 
-                    <div class="roll-dice-container flex items-center mt-5 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 red-500 stroke-current text-red-500 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="hold-container flex items-center cursor-pointer mt-0 sm:mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8 red-500 stroke-current text-red-500 mr-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
                         </svg>
-                          <p class="uppercase text-xl">hold</p>
+                          <p onclick="holdScore()"class="uppercase text-md sm:text-xl">hold</p>
                     </div>
                 </div>
+            </div>
 
+            <!-- MODALS -->
+            <div class="new-game-modal">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity flex justify-center items-center">
+                    <div class="fixed bg-white rounded-xl w-4/5 md:w-3/4 lg:w-2/4 shadow-xl flex flex-col items-center py-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                        </svg>
+                        <h2 class="uppercase font-bold text-2xl text-gray-700">New game</h2>
+
+                        <div class="relative w-full p-5 flex flex-col sm:flex-row items-center">
+                            <div class="player1 w-4/5 sm:w-2/4  flex flex-col items-center">
+                                <label class="mb-5" for="player1">Player 1 :</label>
+                                <input class="w-full sm:w-8/12 shadow-inner bg-red-50 input-test rounded border-2 border-red-100 focus:border-red-500 focus:border-2 p-1 placeholder-gray-300" type="text" id="player1" name="player1" placeholder="Michael">
+                            </div>
+                            <div class="player2 w-4/5 sm:w-2/4 flex flex-col items-center">
+                                <label class="mb-5" for="player2">Player 2 :</label>
+                                <input class="w-full sm:w-8/12 shadow-inner bg-red-50 input-test rounded border-2 border-red-100 focus:border-red-500 focus:border-2 p-1 placeholder-gray-300" type="text" id="player2" name="player2" placeholder="Dwight">
+                            </div>
+                        </div>
+                        <button onclick="displayPlayersNames()"class="start-game bg-red-500 p-3 my-5 w-10/12 rounded-xl text-white uppercase hover:bg-red-600">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-game-modal hidden">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity flex justify-center items-center">
+                    <div class="success-game-modal-container fixed rounded-xl w-4/5 md:w-3/4 lg:w-2/4  shadow-xl flex flex-col items-center py-5">
+                        <figure class="w-3/6">
+                            <img src="../images/dice-winner.gif">
+                        </figure>
+                        <h2 class="text-center uppercase text-2xl text-gray-700">Congratulation<br>
+                        <span class="font-bold text-4xl winner-player"></span></h2>
+                        <button onclick="showStartNewGameModal()"class="start-new-game bg-red-500 p-3 my-5 w-10/12 rounded-xl text-white uppercase hover:bg-red-600">Start new game</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rules-modal hidden">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity flex justify-center items-center">
+                    <div class="rules-modal-container fixed bg-white rounded-xl w-full sm:w-4/5 md:w-3/4 lg:w-2/4 shadow-xl flex flex-col items-center py-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                          </svg>
+                        <h2 class="uppercase font-bold text-2xl text-gray-700">Rules</h2>
+                        <div class="relative w-full p-5">
+                            <p class="text-center mb-5">Welcome to the dice game</p>
+                            <div class="px-10">
+                                <p>This game contains two players on the same screen.<br>
+                                Every single player has : a temporary score and a global score.</p>
+                                <p>At each turn, the temporary score of player is initialized to 0 and the 
+                                    current player can roll the dice as many times as he want.<br>
+                                The result of the throw is added to the temporary score.</p>
+                                <p class="mt-3">During the player's turn, the player can decide to :</p>
+                                <ul>
+                                    <li>Save his temporary score by clicking on Hold button : this action will automatically passed to the other player's turn.</li>
+                                    <li>Keep rolling dice : if the number of dice is 1, the temporary score is initialized to 0 and the player passed his turn.</li>
+                                </ul>
+                                <p>The first player who reach 100 points win the game</p>
+                                <p class="text-align">Good luck !</p>
+                            </div>
+
+                        </div>
+                        <button onclick="showRulesModal()"class="start-game bg-red-500 p-3 my-5 w-10/12 rounded-xl text-white hover:bg-red-600">Got it !</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <script src="dice.js"></script>
+
+        <div class="bottom-px mb-8 flex w-full justify-center cursor-pointer" onclick="showRulesModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p class="text-white ml-3">Règles du jeu</p>
+        </div>
+        
+        <!-- SONDS -->
+        <audio id="start-sound" src="../images/start-sound.mp3"></audio>
+        <audio id="roll-dice-sound" src="../images/dice-sound.mp3"></audio>
+        <audio id="success-sound" src="../images/success-sound.mp3"></audio>
+        <audio id="error-sound" src="../images/error-sound.mp3"></audio>
+  
+        <script src="script.js"></script>
     </body>
     </html>
