@@ -26,10 +26,10 @@
                     <div class="player-bg w-full h-3/6 sm:w-3/6 sm:h-full"></div>
                 </div>
                 <div onclick="showStartNewGameModal()" class="new-game cursor-pointer relative flex items-center w-full justify-items-center justify-center my-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 red-500 stroke-current text-red-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 red-500 stroke-current text-red-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <h1 class="uppercase ml-4 text-2xl">new game</h1>
+                    <h1 class="uppercase ml-4 text-lg md:text-2xl">new game</h1>
                 </div>
                 
                 <!-- PLAYERS CONTAINERS -->
@@ -39,7 +39,7 @@
                     <div class="player-content w-full  flex items-center flex-col justify-between p-5 sm:p-20 sm:justify-start">
 
                         <div class="player-title-container flex items-center">
-                            <h2 class="player-title uppercase text-xl md:text-4xl">Player 1 </h2>
+                            <h2 class="player-title uppercase text-xl md:text-4xl text-center">Player 1 </h2>
                             <span>
                                 <svg class="current-player opacity-0 h-4 w-4 ml-5 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="50"/>
@@ -61,7 +61,7 @@
                     <div class="player-content w-full  flex items-center flex-col justify-between p-5 sm:p-20 sm:justify-start">
 
                         <div class="player-title-container flex items-center">
-                            <h2 class="player-title uppercase text-xl md:text-4xl">Player 2 </h2>
+                            <h2 class="player-title uppercase text-xl md:text-4xl text-center">Player 2 </h2>
                             <span>
                                 <svg class="current-player opacity-0 h-4 w-4 ml-5 fill-current text-red-500"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="50" cy="50" r="50"/>
@@ -149,8 +149,8 @@
             </div>
 
             <div class="rules-modal hidden">
-                <div class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity flex justify-center items-center">
-                    <div class="rules-modal-container fixed bg-white rounded-xl w-full sm:w-4/5 md:w-3/4 lg:w-2/4 shadow-xl flex flex-col items-center py-5">
+                <div class="absolute md:fixed top-0 right-0 w-full h-full bg-gray-500 bg-opacity-50 transition-opacity flex justify-center items-center">
+                    <div class="rules-modal-container bg-white rounded-xl w-full sm:w-4/5 md:w-3/4 lg:w-2/4 shadow-xl flex flex-col items-center py-5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                           </svg>
